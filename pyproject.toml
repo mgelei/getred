@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "getred"
-version = "0.1.4"
+version = "0.1.5"
 description = "A CLI tool to fetch Reddit threads and save them as structured JSON"
 readme = "README.md"
 requires-python = ">=3.8"
