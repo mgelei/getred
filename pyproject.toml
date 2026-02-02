@@ -13,7 +13,7 @@ authors = [
     { name="Mate Gelei-Szego", email="hello@mategelei.com" }
 ]
 classifiers = [
-    Development Status :: 5 - Production/Stable
+    "Development Status :: 5 - Production/Stable", 
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
 ]
