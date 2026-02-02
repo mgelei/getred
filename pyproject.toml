@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "getred"
-version = "0.1.2"
+version = "0.1.3"
 description = "A CLI tool to fetch Reddit threads and save them as structured JSON"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -13,7 +13,7 @@ authors = [
     { name="Mate Gelei-Szego", email="hello@mategelei.com" }
 ]
 classifiers = [
-    Development Status :: 5 - Production/Stable
+    "Development Status :: 5 - Production/Stable", 
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
 ]
