@@ -31,9 +31,17 @@ dependencies = [
 [project.scripts]
 getred = "getred.cli:main"
 
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+]
+
 [project.urls]
 Homepage = "https://github.com/yourusername/getred"
 Issues = "https://github.com/yourusername/getred/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/getred"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

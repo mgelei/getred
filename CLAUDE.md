@@ -59,3 +59,6 @@ getred <url> -q                       # Quiet mode
   - `cli.py`: Click-based CLI entry point
   - `utils.py`: URL validation, slug generation, file operations
   - `__main__.py`: Module entry point for `python -m getred`
+
+## Custom instructions
+- Always use a virtual environment when working with Python (`.venv`)
