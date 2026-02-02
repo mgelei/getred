@@ -62,3 +62,4 @@ getred <url> -q                       # Quiet mode
 
 ## Custom instructions
 - Always use a virtual environment when working with Python (`.venv`)
+- Never run tests directly, always use the pytest-runner agent to do that
