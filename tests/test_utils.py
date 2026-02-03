@@ -14,6 +14,7 @@ class TestValidateRedditUrl:
             "https://www.reddit.com/r/python/comments/abc123/cool_title/",
             "http://reddit.com/r/AskReddit/comments/xyz789/interesting_question/",
             "https://reddit.com/r/programming/comments/test123/test/extra/path/",
+            "https://reddit.com/r/python/comments/abc123/cool_title",
         ]
         for url in valid_urls:
             assert validate_reddit_url(url), f"Expected {url} to be valid"

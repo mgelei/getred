@@ -16,7 +16,7 @@ def validate_reddit_url(url: str) -> bool:
     Returns:
         True if valid Reddit thread URL, False otherwise
     """
-    pattern = r'^https?://(www\.)?reddit\.com/r/[^/]+/comments/[^/]+/'
+    pattern = r'^https?://(www\.)?reddit\.com/r/[^/]+/comments/[^/]+(?:[/?#]|$)'
     return bool(re.match(pattern, url))
 
 
