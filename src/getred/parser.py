@@ -1,13 +1,13 @@
 """Parser for Reddit JSON responses."""
 
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, Any, List
 from getred.models import Thread, Comment
 
 
 def parse_timestamp(timestamp: float) -> str:
     """Convert Unix timestamp to ISO format string."""
-    return datetime.utcfromtimestamp(timestamp).isoformat() + 'Z'
+    return datetime.fromtimestamp(timestamp, timezone.utc).isoformat().replace('+00:00', 'Z')
 
 
 def parse_comment(comment_data: Dict[str, Any], depth: int = 0) -> Comment:
@@ -91,7 +91,7 @@ def parse_thread(json_data: List[Dict[str, Any]]) -> Thread:
         selftext=post_listing.get('selftext', ''),
         score=post_listing.get('score', 0),
         created_utc=parse_timestamp(post_listing.get('created_utc', 0)),
-        fetched_at=datetime.utcnow().isoformat() + 'Z',
+        fetched_at=datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
         comment_count=post_listing.get('num_comments', 0),
         comments=parse_comments(comments_listing)
     )

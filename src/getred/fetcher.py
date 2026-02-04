@@ -6,12 +6,13 @@ from typing import Any, Dict, Optional
 from urllib.parse import urlsplit, urlunsplit
 
 import httpx
+import importlib.metadata
 
 
 class RedditFetcher:
     """Fetches Reddit thread data using the public JSON API."""
 
-    USER_AGENT = "getred/0.1.0 (Reddit Thread Fetcher CLI)"
+    USER_AGENT = f"getred/{importlib.metadata.version('getred')} (Reddit Thread Fetcher CLI)"
     TIMEOUT = 30.0
 
     def __init__(self, transport: Optional[httpx.BaseTransport] = None):
