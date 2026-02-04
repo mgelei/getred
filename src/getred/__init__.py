@@ -1,6 +1,8 @@
 """getred - A CLI tool to fetch Reddit threads and save them as structured JSON."""
 
-__version__ = "0.1.0"
+import importlib.metadata
+
+__version__ = importlib.metadata.version("getred")
 
 from getred.models import Thread, Comment
 
